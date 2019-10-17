@@ -62,7 +62,7 @@ ENJOY, CHEERS
 - Xilinx Impact is used to download bit file to FPGA
 
 NB: Spartan 3 FPGA used to verify design, this forced the use of Xilinx ISE for Implementation
-
+PP_Implementation consists of ISE files, All other folders are for Vivado
 
 Next Steps(Long Term): Superscalar Architecture and also Compiler Construction 
 Next Steps(Short Term): Use SRAM on spartan 3 board as Instruction Memory. Atm, i've defined my own in vhdl. 
