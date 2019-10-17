@@ -61,6 +61,7 @@ ENJOY, CHEERS
 - The bit file is in PP_Implementation Folder.
 - Xilinx Impact is used to download bit file to FPGA
 
+NB: Spartan 3 FPGA used to verify design, this forced the use of Xilinx ISE for Implementation
 
 
 Next Steps(Long Term): Superscalar Architecture and also Compiler Construction 
