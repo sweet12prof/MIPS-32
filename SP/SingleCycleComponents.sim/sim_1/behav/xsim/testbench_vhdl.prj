@@ -1,0 +1,26 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SingleCycleComponents.srcs/sources_1/new/2InputMultiplexer.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/2InputMultiplexer5signalOutput.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/32BitsignExtender.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/4InputMultiplexer.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/ALU.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/ALUdecoder.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/CLA32Adder.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/PC register.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/SINGLECYCLEPROCESSOR.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/TOPmodule.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/andGate.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/controlUnit.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/dataMemory.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/datapath.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/instructionMemory.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/mainDecoder.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/notGate.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/orGate.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/regFile.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/shiftLeft2.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/testBench.vhd" \
+
+# Do not sort compile order
+nosort

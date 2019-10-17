@@ -1,0 +1,33 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/2InputMultiplexer.vhd" \
+"../../../../project_1.srcs/sources_1/new/32BitsignExtender.vhd" \
+"../../../../project_1.srcs/sources_1/new/3Inputmuxwith5signalOutput.vhd" \
+"../../../../project_1.srcs/sources_1/new/7inputMux.vhd" \
+"../../../../project_1.srcs/sources_1/new/ALU.vhd" \
+"../../../../project_1.srcs/sources_1/new/ALUdecoder.vhd" \
+"../../../../project_1.srcs/sources_1/new/CLA32Adder.vhd" \
+"../../../../project_1.srcs/sources_1/new/ControlUnit.vhd" \
+"../../../../project_1.srcs/sources_1/new/Datapath.vhd" \
+"../../../../project_1.srcs/sources_1/new/EX_MpipelineRegister.vhd" \
+"../../../../project_1.srcs/sources_1/new/ID_EXpipelineRegister.vhd" \
+"../../../../project_1.srcs/sources_1/new/IF_IDpipelineRegister.vhd" \
+"../../../../project_1.srcs/sources_1/new/M_WBpipelineRegister.vhd" \
+"../../../../project_1.srcs/sources_1/new/PCmux.vhd" \
+"../../../../project_1.srcs/sources_1/new/andGate.vhd" \
+"../../../../project_1.srcs/sources_1/new/comparator.vhd" \
+"../../../../project_1.srcs/sources_1/new/hazardDetectionUnit.vhd" \
+"../../../../project_1.srcs/sources_1/new/mainDecoder.vhd" \
+"../../../../project_1.srcs/sources_1/new/mux3.vhd" \
+"../../../../project_1.srcs/sources_1/new/notGate.vhd" \
+"../../../../project_1.srcs/sources_1/new/orGate.vhd" \
+"../../../../project_1.srcs/sources_1/new/pcRegister.vhd" \
+"../../../../project_1.srcs/sources_1/new/registerFile.vhd" \
+"../../../../project_1.srcs/sources_1/new/shiftLeft2.vhd" \
+"../../../../project_1.srcs/sources_1/new/sllGate.vhd" \
+"../../../../project_1.srcs/sources_1/new/srlGate.vhd" \
+"../../../../project_1.srcs/sources_1/new/xorGate.vhd" \
+"../../../../project_1.srcs/sources_1/new/pipeLinedProcessor.vhd" \
+
+# Do not sort compile order
+nosort

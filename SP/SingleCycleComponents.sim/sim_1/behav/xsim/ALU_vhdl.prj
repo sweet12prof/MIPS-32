@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SingleCycleComponents.srcs/sources_1/new/2InputMultiplexer.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/4InputMultiplexer.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/CLA32Adder.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/andGate.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/notGate.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/orGate.vhd" \
+"../../../../SingleCycleComponents.srcs/sources_1/new/ALU.vhd" \
+
+# Do not sort compile order
+nosort

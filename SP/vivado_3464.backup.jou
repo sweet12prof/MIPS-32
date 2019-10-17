@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Oct  3 11:45:58 2019
+# Process ID: 3464
+# Current directory: C:/Users/TI LAB/Desktop/ORGANIZED CODE/SP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5936 C:\Users\TI LAB\Desktop\ORGANIZED CODE\SP\SingleCycleComponents.xpr
+# Log file: C:/Users/TI LAB/Desktop/ORGANIZED CODE/SP/vivado.log
+# Journal file: C:/Users/TI LAB/Desktop/ORGANIZED CODE/SP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/TI LAB/Desktop/ORGANIZED CODE/SP/SingleCycleComponents.xpr}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SingleCycleProcessor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+refresh_design
+update_compile_order -fileset sources_1
+refresh_design

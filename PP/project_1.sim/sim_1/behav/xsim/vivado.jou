@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Oct 17 17:54:49 2019
+# Process ID: 7788
+# Current directory: C:/Users/TI LAB/Desktop/MIPS-32/PP/project_1.sim/sim_1/behav/xsim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9096 C:\Users\TI LAB\Desktop\MIPS-32\PP\project_1.sim\sim_1\behav\xsim\top_behav.wdb
+# Log file: C:/Users/TI LAB/Desktop/MIPS-32/PP/project_1.sim/sim_1/behav/xsim/vivado.log
+# Journal file: C:/Users/TI LAB/Desktop/MIPS-32/PP/project_1.sim/sim_1/behav/xsim\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_wave_database {C:\Users\TI LAB\Desktop\MIPS-32\PP\project_1.sim\sim_1\behav\xsim\top_behav.wdb}

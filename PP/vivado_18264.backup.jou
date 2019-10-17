@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct  8 13:12:07 2019
+# Process ID: 18264
+# Current directory: C:/Users/TI LAB/Desktop/MIPS-32 still Organizing/PP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13636 C:\Users\TI LAB\Desktop\MIPS-32 still Organizing\PP\project_1.xpr
+# Log file: C:/Users/TI LAB/Desktop/MIPS-32 still Organizing/PP/vivado.log
+# Journal file: C:/Users/TI LAB/Desktop/MIPS-32 still Organizing/PP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/TI LAB/Desktop/MIPS-32 still Organizing/PP/project_1.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source testBench.tcl
+close_sim
+launch_simulation
+source testBench.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sllGate [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+set_property part xc7a35tcpg236-1 [current_project]
+close_sim
+synth_design -rtl -name rtl_1
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testBench [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+refresh_design
+launch_simulation
+launch_simulation
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sllGate [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top srlGate [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+close_design
+synth_design -rtl -name rtl_1
+refresh_design
+refresh_design
+launch_simulation
+source testBench.tcl
+close_sim
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+synth_design -rtl -name rtl_1
+close_design
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testBench [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+launch_simulation
+source testBench.tcl
+close_sim
