@@ -1,4 +1,4 @@
---------------------------------------------------------------------------------------Done B/n the Periods of January - May 2019
+--------------------------------------------------------------------------------------Done B/n the Periods of September 2018 - May 2019
 pp -- Pipelined processor, Up to 15 instructions 
 	add
 	sub 
@@ -48,7 +48,7 @@ ENJOY, CHEERS
 
 
 
---------------------------------------------------17-10-2019
+-------------------------------------------------------------------------------------------------------------------------17-10-2019
 
 - Implemented haltCPU instruction(Partially to stop CPU on last instruction in the IMEM)-----haltCPU => FFFFFFFF
 - Added Seven Segment Module for spartan 3 FPGA XCS200, in Seven Segment Folder
