@@ -97,7 +97,7 @@ begin
 								
 		  clockFix1 : DebugCounter PORT MAP
 								(
-										   Clock_enable_B => '1',
+										   Clock_enable_B => clkEn,
 											Clock => clockNew,											
 											newClock => clockNew2
 								);

@@ -1,7 +1,7 @@
-Release 14.7 - par P.20131013 (nt)
+Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Oct 17 14:42:38 2019
+Mon Oct 21 16:28:48 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -192,7 +192,7 @@ Pinout by Pin Number:
 |L10       |            |         |VCCO_4             |         |           |4             |          |         |           |         |2.50     |          |           |                |
 |L11       |            |         |GND                |         |           |              |          |         |           |         |         |          |           |                |
 |L12       |            |DIFFM    |IO_L23P_3/VREF_3   |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|L13       |            |DIFFS    |IO_L21N_3          |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|L13       |clkEn       |IOB      |IO_L21N_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |L14       |            |DIFFM    |IO_L22P_3          |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L15       |            |DIFFS    |IO_L22N_3          |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L16       |            |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |
