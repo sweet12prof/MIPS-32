@@ -1,4 +1,4 @@
---------------------------------------------------------------------------------------Done B/n the Periods of January - May 2019
+--------------------------------------------------------------------------------------Done B/n the Periods of September 2018 - May 2019
 pp -- Pipelined processor, Up to 15 instructions 
 	add
 	sub 
@@ -48,7 +48,7 @@ ENJOY, CHEERS
 
 
 
---------------------------------------------------17-10-2019
+-------------------------------------------------------------------------------------------------------------------------17-10-2019
 
 - Implemented haltCPU instruction(Partially to stop CPU on last instruction in the IMEM)-----haltCPU => FFFFFFFF
 - Added Seven Segment Module for spartan 3 FPGA XCS200, in Seven Segment Folder
@@ -61,7 +61,8 @@ ENJOY, CHEERS
 - The bit file is in PP_Implementation Folder.
 - Xilinx Impact is used to download bit file to FPGA
 
-
+NB: Spartan 3 FPGA used to verify design, this forced the use of Xilinx ISE for Implementation
+PP_Implementation consists of ISE files, All other folders are for Vivado
 
 Next Steps(Long Term): Superscalar Architecture and also Compiler Construction 
 Next Steps(Short Term): Use SRAM on spartan 3 board as Instruction Memory. Atm, i've defined my own in vhdl. 
