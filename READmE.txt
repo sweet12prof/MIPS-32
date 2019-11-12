@@ -32,15 +32,15 @@ SP  -- Single Cycle Processor, Up to 10
 Yet to implement ====WFI to halt 
 
 
-Instrunction Memory 2 codes 
-	1. Hard coded Decoder serving as ROM  ------dorminant one used for fpga configuration
-	2. memory written in VHDL, loads txt file containing instructions but not synthesisable for fpga-------COMMENTED PORTION IN THE Instruction memory code
-	-Memfile is added, u can use option 2 by highlighting 1. but point memfile.txt directory on your machine.
-	-Memfile contains a program which multiply 2 numbers by the naive algorithm approach; seperate registers for multiplicand and multiplier
+Wrote 2 codes for instrunction Memory 
+	1. Simple Decoder serving as imem ROM  ------this is used for fpga synthesis
+	2. memory written in VHDL, loads txt file containing instructions but not synthesisable for fpga-------COMMENTED PORTION IN THE Instruction memory file.
+	-A hex file can be loaded into option 2, but directory must be pointed to that file in the imem Code 
+	-A hex file is included within the repo, it contains a sample program which multiplies 2 numbers                                           (Add-shift multicycle approach) 
 	- Testbench reports if program in 1 executes successfully 
 	- Program in 1 tests instructions at random, not a meaningful program 
 	- it stores 84 in address location 7 at end (this condition is checked in testbench)\
-	- Don't use option 2 for Single Cycle processor, it does not have all the instruction 	
+	- Don't use hexfile included in the PP repo for SP as instructions in the hexfile go beyond SPs ISA.	
 
 
 Yet to Update Extra modules used for fpga configuration
