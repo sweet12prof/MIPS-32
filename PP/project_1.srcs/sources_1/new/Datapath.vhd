@@ -292,8 +292,10 @@ begin
 		         
 		nextHalt <= haltPC or HU_StallD;
 		-----IFregClr signal
-		IFRegClr <= CU_pcsrcD(0) or CU_pcsrcD(1) or CU_pcsrcD(2) or CU_pcsrcD(3); 
+		IFRegClr <= CU_pcsrcD(1) or CU_pcsrcD(2) or CU_pcsrcD(3) when HU_StallD = '1' else 
+		           CU_pcsrcD(0) or CU_pcsrcD(1) or CU_pcsrcD(2) or CU_pcsrcD(3) ; 
 		
+--		IFRegClr <= CU_pcsrcD(0) or CU_pcsrcD(1) or CU_pcsrcD(2) or CU_pcsrcD(3) ;
 		----PCplus4F
 		pcPlus4 : Adder32 port map
 		(

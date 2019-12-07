@@ -3,68 +3,48 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="top_behav.wdb" id="1">
+      <db_ref path="testBench_behav.wdb" id="1">
          <top_modules>
-            <top_module name="top" />
+            <top_module name="testBench" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="10210630000000fs"></ZoomStartTime>
-      <ZoomEndTime time="10532630000001fs"></ZoomEndTime>
-      <Cursor1Time time="10211250000000fs"></Cursor1Time>
+      <ZoomStartTime time="601600000fs"></ZoomStartTime>
+      <ZoomEndTime time="608080001fs"></ZoomEndTime>
+      <Cursor1Time time="607000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="237"></NameColumnWidth>
-      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/top/clk" type="logic">
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/testBench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/reset" type="logic">
+   <wvobject fp_name="/testBench/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/writedata" type="array">
-      <obj_property name="ElementShortName">writedata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">writedata[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top/dataadr" type="array">
-      <obj_property name="ElementShortName">dataadr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dataadr[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top/memwrite" type="logic">
+   <wvobject fp_name="/testBench/memwrite" type="logic">
       <obj_property name="ElementShortName">memwrite</obj_property>
       <obj_property name="ObjectShortName">memwrite</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/pc" type="array">
-      <obj_property name="ElementShortName">pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   <wvobject fp_name="/testBench/writedata" type="array">
+      <obj_property name="ElementShortName">writedata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">writedata[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/instr" type="array">
-      <obj_property name="ElementShortName">instr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+   <wvobject fp_name="/testBench/dataadr" type="array">
+      <obj_property name="ElementShortName">dataadr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dataadr[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/readdata" type="array">
-      <obj_property name="ElementShortName">readdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">readdata[31:0]</obj_property>
+   <wvobject fp_name="/testBench/dut/pipe/pdatapath1/HU_ForwardAD" type="logic">
+      <obj_property name="ElementShortName">HU_ForwardAD</obj_property>
+      <obj_property name="ObjectShortName">HU_ForwardAD</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/dataadrSignal" type="array">
-      <obj_property name="ElementShortName">dataadrSignal[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dataadrSignal[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top/writeDataSignal" type="array">
-      <obj_property name="ElementShortName">writeDataSignal[31:0]</obj_property>
-      <obj_property name="ObjectShortName">writeDataSignal[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top/memWriteSignal" type="logic">
-      <obj_property name="ElementShortName">memWriteSignal</obj_property>
-      <obj_property name="ObjectShortName">memWriteSignal</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top/pipe/pdatapath1/haltPC" type="logic">
-      <obj_property name="ElementShortName">haltPC</obj_property>
-      <obj_property name="ObjectShortName">haltPC</obj_property>
+   <wvobject fp_name="/testBench/dut/pipe/pdatapath1/HU_ForwardBD" type="logic">
+      <obj_property name="ElementShortName">HU_ForwardBD</obj_property>
+      <obj_property name="ObjectShortName">HU_ForwardBD</obj_property>
    </wvobject>
 </wave_config>

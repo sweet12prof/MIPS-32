@@ -2,12 +2,19 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Oct 17 17:54:59 2019
-# Process ID: 12144
+# Start of session at: Thu Dec  5 17:09:55 2019
+# Process ID: 6660
 # Current directory: C:/Users/TI LAB/Desktop/MIPS-32/PP
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16128 C:\Users\TI LAB\Desktop\MIPS-32\PP\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5404 C:\Users\TI LAB\Desktop\MIPS-32\PP\project_1.xpr
 # Log file: C:/Users/TI LAB/Desktop/MIPS-32/PP/vivado.log
 # Journal file: C:/Users/TI LAB/Desktop/MIPS-32/PP\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/TI LAB/Desktop/MIPS-32/PP/project_1.xpr}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top comparator [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
