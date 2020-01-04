@@ -93,7 +93,7 @@ signals required to activate and represent a symbol on each segment
  | 000          |Fetch Stage|1 | 0| 0 | 0 | 0 | 000 | PC | (15 downto 0 ) |0| 0 |
  |000           |Fetch Stage|1 | 0| 0 | 0 | 0 | 001 | Instruction at Fetch| (31 downto 16)|0| 0 |
  |000|Fetch Stage| 1 | 0| 0 | 0 | 0 | 010 | Instruction at Fetch| (15 downto 0) |0| 0 |
- |000|Decode Stage | 0 | 1| 0 | 0 | 0 | 000 |Instruction at Decode | (31 downto 16) |0| 0 |
+ |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 000 |Instruction at Decode | (31 downto 16) |0| 0 |
  |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 001 | Instruction at Decode | (15 downto 0) |0| 0 |
  |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 010 | RD1(Operand read from port 1) at Decode | (15 downto 0) |0| 0 |
  |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 011 | RD2(Operand read from port 2) at Decode | (15 downto 0) |0| 0 |
