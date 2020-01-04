@@ -6,6 +6,8 @@
 * It runs at a cycle time equivalent to the time taken by the instruction that takes the longest time.
 * It has a CPI of 1.
 * This implementation adopts 10 instructions from the MIPS32 instruction set.
+* It contains 32 registers
+* Features all addressing modes of the MIPS core instruction set
 
 ### Instructions 
 #### R-Format
