@@ -64,18 +64,20 @@ as a result of a mispredicted branch.
 * The processor consists of a Datapath, control unit and Hazard unit.
 * The hazard unit checks whether close overlapping instructions are capable of resulting into a hazards, if so, it generates 
 signals which stall or flush the pipeline thereby resolving the hazard.
-* The architectural state elements used in the design include the register file, the program counter, pipeline registers and Memories.
+* The architectural state elements used in the design include the register file, the program counter, 4 pipeline registers and Memories.
 
 ## Testing 
  * At top Level the unbounded I/O include the data adress(dataadr) and write data(writedata) of the data Memory.
  * This was done to aid in testbench ; Simulation programs used in testbench, retire/complete by storing results in the data memory. For this reason, these signals are unbounded at top level to allow debugging
  * The configuration can easily be changed by editing the files representing level of abstractions above the Datapath.
  * The vhd files can be found in the src folder
- * At the moment the program in the instruction memory is a random program that tests all the instruction, it doesn't implement any meaningful program. This can be easily changed by modifying the instruction memory. However, ensure your program utilizes only instructions that were adopted! otherwise won't produce the correct output.
- * You can safely edit the testbench to verify results for your custom program.
+ * The program in the instruction memory consists of the add-shift method to multiply 2 numbers, it multiplies 40 by 5 in this case and produces a result of 200. This can be edited out with your own program. However make sure to utilize only the instructions adopted. Any instructions which are not within this subset will render execution of that program incorrect or a failure.
+ * You can also safely edit the testbench to verify results for your custom program.
  
 ## Synthesis and Implementation For FPGA
-* Design doesn't require a lot of resources, was easily synthesised for the retired Xilinx Spartan 3
+* Design synthesised correctly for the retired Xilinx Spartan 3 FPGA
 * The spartan 3 can be used as reference when deciding an FPGA for synthesis/implementation of this project.
 * More I/O can be brought through from the Datapath to the top Level by editing the vhd files as satated earlier for I/O planning
 * Don't synthesise the testbench :/
+
+Cheers
