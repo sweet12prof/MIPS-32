@@ -88,28 +88,28 @@ signals required to activate and represent a symbol on each segment
 * With this I/O plan, signals from every stage can be witnessed on the FPGA.
 * The following table shows the Inputs :
 
- |Stage Selector| Stage | Signal Selector| Signal | Size | RegisterWriteEnable Signal  (Additional LED Output) | MemwriteEnable Signal  (Additional LED Output) |
- |--------------|-------|----------------|------- |------|---|-----|
- | 000          |Fetch Stage| 000 | PC | (15 downto 0 ) |0| 0 |
- |000           |Fetch Stage| 001 | Instruction at Fetch| (31 downto 16)|0| 0 |
- |000|Fetch Stage| 010 | Instruction at Fetch| (15 downto 0) |0| 0 |
- |000|Decode Stage |000 |Instruction at Decode | (31 downto 16) |0| 0 |
- |001|Decode Stage | 001 | Instruction at Decode | (15 downto 0) |0| 0 |
- |001|Decode Stage | 010 | RD1(Operand read from port 1) at Decode | (15 downto 0) |0| 0 |
- |001|Decode Stage | 011 | RD2(Operand read from port 2) at Decode | (15 downto 0) |0| 0 |
- |010|Execute Stage | 000 | Instruction at Execute | (31 downto 16) |0| 0 |
- |010|Execute Stage | 001 | Instruction at Execute | (15 downto 0) |0| 0 |
- |010|Execute Stage | 010 | ALU Input 1(AT Execute) | (15 downto 0) |0| 0 |
- |010|Execute Stage | 011 | ALU Input 2(At Execute) | (15 downto 0) |0| 0 |
- |011|Execute Stage| 100 | ALU Output(At Execute) | (15 downto 0) |0| 0 |
- |100|Memory Stage | 000 | Instruction at Memory Stage | (31 downto 16) |0| 1 |
- |100|Memory Stage | 001 | Instruction at Memory Stage | (15 downto 0)  |0| 1|
- |100|Memory Stage | 010 | Writedata port For Memory    |  (15 downto 0) |0| 1 |
- |100|Memory Stage | 010 | Data address port for Memory Write/Read | 15 downto 0 |1| 0 |
- |101|Writeback Stage | 000  | Instruction at WriteBack Stage | (31 downto 16) |1| 0 |
- |101|Writeback Stage | 001  | Instruction at Writeback Stage | (15 downto 0) |1| 0 |
- |101|Writeback Stage | 010  | data to Write to Register | (15 downto 0) |1| 0 |
- |101| Writeback Stage | 011 | register Select/Address for Write| (4 downto 0)  left padded with Zeros| 1 | 0 |
+ |Stage Selector| Stage | F_LED | D_LED | E_LED | M_LED | W_LED | Signal Selector| Signal | Size | RegisterWriteEnable Signal  (Additional LED Output) | MemwriteEnable Signal  (Additional LED Output) |
+ |--------------|-------|--|--|--|---|--|-----|------- |------|---|-----|
+ | 000          |Fetch Stage|1 | 0| 0 | 0 | 0 | 000 | PC | (15 downto 0 ) |0| 0 |
+ |000           |Fetch Stage|0 | 0| 0 | 0 | 0 | 001 | Instruction at Fetch| (31 downto 16)|0| 0 |
+ |000|Fetch Stage| 1 | 0| 0 | 0 | 0 | 010 | Instruction at Fetch| (15 downto 0) |0| 0 |
+ |000|Decode Stage | 0 | 1| 0 | 0 | 0 | 000 |Instruction at Decode | (31 downto 16) |0| 0 |
+ |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 001 | Instruction at Decode | (15 downto 0) |0| 0 |
+ |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 010 | RD1(Operand read from port 1) at Decode | (15 downto 0) |0| 0 |
+ |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 011 | RD2(Operand read from port 2) at Decode | (15 downto 0) |0| 0 |
+ |010|Execute Stage | 0 | 0| 1 | 0 | 0 | 000 | Instruction at Execute | (31 downto 16) |0| 0 |
+ |010|Execute Stage | 0 | 0| 1 | 0 | 0 | 001 | Instruction at Execute | (15 downto 0) |0| 0 |
+ |010|Execute Stage | 0 | 0| 1 | 0 | 0 |010 | ALU Input 1(AT Execute) | (15 downto 0) |0| 0 |
+ |010|Execute Stage | 0 | 0| 1 | 0 | 0 |011 | ALU Input 2(At Execute) | (15 downto 0) |0| 0 |
+ |011|Execute Stage| 0 | 0| 1 | 0 | 0 | 100 | ALU Output(At Execute) | (15 downto 0) |0| 0 |
+ |100|Memory Stage | 0 | 0| 0 | 1 | 0 | 000 | Instruction at Memory Stage | (31 downto 16) |0| 1 |
+ |100|Memory Stage |0 | 0| 0 | 1 | 0 | 001 | Instruction at Memory Stage | (15 downto 0)  |0| 1|
+ |100|Memory Stage | 0 | 0| 0 | 1 | 0 | 010 | Writedata port For Memory    |  (15 downto 0) |0| 1 |
+ |100|Memory Stage | 0 | 0| 0 | 1 | 0 | 010 | Data address port for Memory Write/Read | 15 downto 0 |1| 0 |
+ |101|Writeback Stage|0  | 0| 0 | 0 | 1 | 000  | Instruction at WriteBack Stage | (31 downto 16) |1| 0 |
+ |101|Writeback Stage | 0 | 0| 0 | 0 | 1 | 001  | Instruction at Writeback Stage | (15 downto 0) |1| 0 |
+ |101|Writeback Stage | 0 | 0| 0 | 0 | 1 | 010  | data to Write to Register | (15 downto 0) |1| 0 |
+ |101| Writeback Stage |0 | 0| 0 | 0 | 1 | 011 | register Select/Address for Write| (4 downto 0)  left padded with Zeros| 1 | 0 |
  
  
  * Also the board has pll of frequency 50 MHZ, I squeezed out 40 MHZ out of it while being able to meet constraints.
