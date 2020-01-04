@@ -19,7 +19,7 @@ the instructions completed at a given time(throughput).
 as a result of a mispredicted branch.
 * The CPI of a pipeline is effectively defined by the equation CPI = Ideal CPI + branch hazards + Control Hazards. 
 * CPI is generally <= 1
-* The design adopts a subset(15 instructions) of the MIPS ISA
+* The design adopts a subset(15 instructions) of the MIPS ISA and an extra instruction to halkt the CPU(For debug on FPGA)
 * It consists of 32 registers and utilizes all of the addressing modes featurd by the ISA
 
 ### Instructions 
@@ -32,8 +32,10 @@ as a result of a mispredicted branch.
 |and rd, rs, rt|Rd = Rs and Rt |000000| sssss| ttttt | ddddd| 00000| 100100 |
 |or rd, rs, rt|Rd = Rs or Rt |000000| sssss| ttttt | ddddd| 00000| 100101 |
 |slt rd, rs,rt |rs == rt ? 1:0 |000000| sssss| ttttt | ddddd| 00000| 101010 |
-|sll rd, rs, rx | rd =rs sll shamt | 00000 | sssss | 00000 | 00000 | xxxxxx | 000000 |
-| srl rd, rs, rx | rd = rs = srl shamt | 00000 | sssss | 00000 | 00000 | xxxxxx | 000010 |  
+|sll rd, rs, rx | rd =rs sll rx | 000000 | sssss | 00000 | 00000 | xxxxxx | 000000 |
+| srl rd, rs, rx | rd = rs = srl rx | 000000 | sssss | 00000 | 00000 | xxxxxx | 000010 |  
+| xor rd, rs, rt | rd = rs xor rt | 000000 | sssss | ttttt | ddddd | 00000 | 100110 |
+|Jr rs  | Jump to Address in register(rs) : pc = $rs| 000000 | ssssss | 000000 | 000000 | 00000 | 001000 |  
 #### I-Format
 | Instructions | Meaning | Opcode | Rs | Rt | Address | 
 |-|-|-|-|-|-|
@@ -47,13 +49,22 @@ as a result of a mispredicted branch.
 | Instructions | Meaning | Opccode | Jump Address |
 |-|-|-|-|
 |J Address | pc = Address | 000010 | Address |
+| Jal Address | Jump and Link : $ra($31) = pc + 4 then pc = Address | 000011 | Address |  
 
+
+#### Halt CPU
+| Instructrion | Meaning | Opcode | Remaining bits |
+|--------------|---------|--------|----------------|
+| |  | 6 bits | 26 bits |
+| halt         | halt the CPU | 11111 | (dont care) |
 ## Design Methodology
-* Schematic for single cycle processor in SP directory
+* Schematic for processor in directory
 * Xilinx ISE used for design using VHDL
 * The processor at top module is interfaced with seperate memories for data(Dmem) and Instruction(Imem) memories, thus at top level module implements the Havard architecture.
-* The processor consists of a Datapath and control unit 
-* The architectural state elements used in the design include the register file, the program counter and Memories.
+* The processor consists of a Datapath, control unit and Hazard unit.
+* The hazard unit checks whether close overlapping instructions are capable of resulting into a hazards, if so, it generates 
+signals which stall or flush the pipeline thereby resolving the hazard.
+* The architectural state elements used in the design include the register file, the program counter, pipeline registers and Memories.
 
 ## Testing 
  * At top Level the unbounded I/O include the data adress(dataadr) and write data(writedata) of the data Memory.
