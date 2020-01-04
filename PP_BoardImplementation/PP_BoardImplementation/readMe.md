@@ -91,7 +91,7 @@ signals required to activate and represent a symbol on each segment
  |Stage Selector| Stage | F_LED | D_LED | E_LED | M_LED | W_LED | Signal Selector| Signal | Size | RegisterWriteEnable Signal  (Additional LED Output) | MemwriteEnable Signal  (Additional LED Output) |
  |--------------|-------|--|--|--|---|--|-----|------- |------|---|-----|
  | 000          |Fetch Stage|1 | 0| 0 | 0 | 0 | 000 | PC | (15 downto 0 ) |0| 0 |
- |000           |Fetch Stage|0 | 0| 0 | 0 | 0 | 001 | Instruction at Fetch| (31 downto 16)|0| 0 |
+ |000           |Fetch Stage|1 | 0| 0 | 0 | 0 | 001 | Instruction at Fetch| (31 downto 16)|0| 0 |
  |000|Fetch Stage| 1 | 0| 0 | 0 | 0 | 010 | Instruction at Fetch| (15 downto 0) |0| 0 |
  |000|Decode Stage | 0 | 1| 0 | 0 | 0 | 000 |Instruction at Decode | (31 downto 16) |0| 0 |
  |001|Decode Stage | 0 | 1| 0 | 0 | 0 | 001 | Instruction at Decode | (15 downto 0) |0| 0 |
@@ -115,7 +115,7 @@ signals required to activate and represent a symbol on each segment
  * Also the board has pll of frequency 50 MHZ, I squeezed out 40 MHZ out of it while being able to meet constraints.
  * Any modern FPGAs should achieve higher than this
  * The speed is further stepped down to enable debug on the FPGA
- * I achieve this stepdown by using a 40 million up counter and a clock enable which is controlled by a button to allow manual \
+ * I achieve this stepdown by using a 40 million up counter and a clock enable which is controlled by a button to allow manual STEP THROUGH
  stepthrough of the execution of a program.
  * This settings can easily be changed from the top module.
 
