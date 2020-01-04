@@ -79,5 +79,6 @@ signals which stall or flush the pipeline thereby resolving the hazard.
 * The spartan 3 can be used as reference when deciding an FPGA for synthesis/implementation of this project.
 * More I/O can be brought through from the Datapath to the top Level by editing the vhd files as satated earlier for I/O planning
 * Don't synthesise the testbench :/
+* Head to board implement if you want to see/read how i went about my FPGA implementation for this design
 
 Cheers
