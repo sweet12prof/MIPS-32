@@ -1,5 +1,5 @@
 # SP (Single Cycle Processor)
-## General Inafo 
+## General Info 
 * Design of a 32-bit Single Cycle MIPS processor based on a subset(10 instructions) of the MIPS instruction set
 ## Behavior
 * The single Cycle processor, as it name suggest execute a single instruction in a single clock cycle.
